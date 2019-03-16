@@ -4,7 +4,7 @@
 #
 Name     : R-clipr
 Version  : 0.5.0
-Release  : 5
+Release  : 6
 URL      : https://cran.r-project.org/src/contrib/clipr_0.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clipr_0.5.0.tar.gz
 Summary  : Read and Write from the System Clipboard
