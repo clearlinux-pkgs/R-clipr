@@ -4,13 +4,12 @@
 #
 Name     : R-clipr
 Version  : 0.5.0
-Release  : 4
+Release  : 5
 URL      : https://cran.r-project.org/src/contrib/clipr_0.5.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clipr_0.5.0.tar.gz
 Summary  : Read and Write from the System Clipboard
 Group    : Development/Tools
 License  : GPL-3.0
-Requires: R-rlang
 BuildRequires : R-rlang
 BuildRequires : buildreq-R
 
@@ -34,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547223522
+export SOURCE_DATE_EPOCH=1552727664
 
 %install
-export SOURCE_DATE_EPOCH=1547223522
+export SOURCE_DATE_EPOCH=1552727664
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,8 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library clipr|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  clipr || :
 
 
 %files
@@ -100,3 +98,8 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/clipr/html/00Index.html
 /usr/lib64/R/library/clipr/html/R.css
 /usr/lib64/R/library/clipr/rstudio/addins.dcf
+/usr/lib64/R/library/clipr/tests/testthat.R
+/usr/lib64/R/library/clipr/tests/testthat/setup.R
+/usr/lib64/R/library/clipr/tests/testthat/test-diagnostics.R
+/usr/lib64/R/library/clipr/tests/testthat/test-systems.R
+/usr/lib64/R/library/clipr/tests/testthat/test_render.R
