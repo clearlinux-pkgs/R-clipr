@@ -4,16 +4,26 @@
 #
 Name     : R-clipr
 Version  : 0.7.0
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/clipr_0.7.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/clipr_0.7.0.tar.gz
 Summary  : Read and Write from the System Clipboard
 Group    : Development/Tools
 License  : GPL-3.0
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
-the Windows, OS X, and X11 clipboards.
+# clipr
+[![CRAN
+status.](http://www.r-pkg.org/badges/version/clipr)](http://www.r-pkg.org/pkg/clipr)
+total](http://cranlogs.r-pkg.org/badges/grand-total/clipr) [![Travis-CI
+Build
+Status](https://travis-ci.org/mdlincoln/clipr.svg?branch=master)](https://travis-ci.org/mdlincoln/clipr)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/mdlincoln/clipr?branch=master&svg=true)](https://ci.appveyor.com/project/mdlincoln/clipr)
+[![Coverage
+Status](https://img.shields.io/codecov/c/github/mdlincoln/clipr/master.svg)](https://codecov.io/github/mdlincoln/clipr?branch=master)
 
 %prep
 %setup -q -c -n clipr
@@ -23,10 +33,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1563897168
+export SOURCE_DATE_EPOCH=1571810371
 
 %install
-export SOURCE_DATE_EPOCH=1563897168
+export SOURCE_DATE_EPOCH=1571810371
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
